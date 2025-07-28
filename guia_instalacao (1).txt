@@ -1,0 +1,27 @@
+
+Guia de Instalação do Projeto Marketplace com Buscador Automatizado
+
+1. Instale o Python 3.10 ou superior em seu computador.
+
+2. Crie um ambiente virtual:
+   python -m venv venv
+   source venv/bin/activate (Linux/Mac)
+   venv\Scripts\activate (Windows)
+
+3. Instale as dependências:
+   pip install fastapi uvicorn
+
+4. Execute o servidor FastAPI:
+   uvicorn nome_do_arquivo:app --reload
+
+5. Acesse a API no navegador:
+   http://127.0.0.1:8000/produtos
+
+6. Para cadastrar produtos automaticamente, você pode criar um script separado
+que consome APIs da Shopee, Mercado Livre e Amazon
+e envia os dados para o endpoint POST /produtos.
+
+7. O banco de dados SQLite será criado automaticamente como marketplace.db.
+
+8. Para testar a API, use ferramentas como Postman ou o Swagger UI:
+   http://127.0.0.1:8000/docs
